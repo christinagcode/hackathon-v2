@@ -55,7 +55,7 @@
     width: 0px;
     height: 0px;
     padding: 20px;
-    margin: -50px 0px 0px 200px;
+    margin: -51px 0px 0px 200px;
     float: left;
     position:relative
 
@@ -72,9 +72,10 @@
     height: 40px;
     width: 1275px;
     font-size: 20px;
-    margin: 7px 0px 0px 0px;
+    margin: 6px 0px 0px 0px;
     border: none;
     font-family: 'Anek Gujarati', sans-serif;
+    outline:none
 
   }
   
@@ -101,7 +102,7 @@
 
 .bodyMain {
       /* position: relative; */
-      padding: 20px;
+      padding: 15px;
       /* margin: 0px 10px 10px 30px; */
       background-color: #F6F6EF;
       font-family: 'Anek Gujarati', sans-serif;
@@ -114,17 +115,30 @@
       
 }
 
+select {
+    border-color: #c4c2c2;
+    height: 25px;
+    margin: -3px 04px 0px 5px;
+    font-family: 'Anek Gujarati', sans-serif;
+    color:#696969;  
+    background-color: #F6F6EF;
+    
+}
 
+p {
+    font-family: 'Anek Gujarati', sans-serif;
+    font-size: 13px;
+    padding: 2px;
+}
 
 ul{
     font-family: 'Anek Gujarati', sans-serif;
     list-style-type: none;
-    color: #8290AE;
 }
 
 
 a:link {
-    color: black;
+    color: #696969;
     background-color: transparent;
     text-decoration: none;
   }
@@ -138,11 +152,8 @@ a:link {
     background-color: transparent;
     text-decoration: underline;
   }
-  a:active {
-    color: black;
-    background-color: transparent;
-    text-decoration: underline;
-  } 
+
+   
 
 
 .Footer_list {

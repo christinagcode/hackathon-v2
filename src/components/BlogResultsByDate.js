@@ -21,7 +21,7 @@ export default function ResultsByDate(props) {
           <a href={Result.url}>({Result.url})</a>
         </span>
       </div>
-      <span>
+      <span className="miniLink">
         <a href={itemLink + Result.objectID}>{Result.points}</a>
         {urlSeparator}
         <a href={userLink + Result.author}>{Result.author}</a>
