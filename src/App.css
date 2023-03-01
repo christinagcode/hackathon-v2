@@ -2,37 +2,45 @@
 
 * {
     box-sizing: border-box;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 0px 10px 1px;
+    
 }
 
 .header {
     background-color: #ff742b;
     padding: 6px;
-    height: 65px;
+    height: 60px;
+    width: 1650px;
+    margin: 0px 0px 0px 120px
 }
 
 .innerHeader{
     background-color:#ff742b;
+
 }
 
 
 .logoimg {
     height: 35px;
-    margin: 7px 0px 0px -34px;
+    margin: 6px 0px 0px 4px;
 }
 
 .title1 {
     float: left;
     font-family: 'Anek Gujarati', sans-serif;
-    font-size: 20px;
-    margin: -40px 0px 0px 33px;
+    font-size: 19px;
+    margin: -48px 0px 0px 53px;
+
+
 }
 
 .title2 {
     float: left;
     font-family: 'Anek Gujarati', sans-serif;
-    font-size: 20px;
-    margin: -22px 0px 0px 33px;
+    font-size: 19px;
+    margin: -31px 0px 0px 53px;
+
+
 }
 
 .searchIcon {
@@ -44,36 +52,42 @@
 
 .sIconBackground{
     background-color: white;
-    width: 30px;
-    height: 3px;
-    padding: 23px;
-    margin: -43px -20px 0px 5px;
+    width: 0px;
+    height: 0px;
+    padding: 20px;
+    margin: -50px 0px 0px 200px;
     float: left;
+    position:relative
+
 }
 
 .searchContainer {
-    width: 1510px;
-    height: 43px;
-    margin: -43px 0px 0px 180px;
+    margin: -57px 0px 0px 230px;
+    
 }
 
 
 .searchContainer input[type=text] {
-    padding: 4px;
-    height: 46px;
-    width: 90%;
-    font-size: 17px;
+    padding: 20px;
+    height: 40px;
+    width: 1275px;
+    font-size: 20px;
+    margin: 7px 0px 0px 0px;
     border: none;
     font-family: 'Anek Gujarati', sans-serif;
+
   }
   
 .searchInput input[type="text"]:focus {
     outline : none;
+
+
+    
 }
 .settingIcon {
     float: right;
     height: 25.4px;
-    margin: -34px 37px 0px 0px;
+    margin: -42px 80px 0px 0px;
 }
 
 .settingWord {
@@ -81,16 +95,64 @@
     font-family: 'Anek Gujarati', sans-serif;
     font-size: 19px;
     font-weight: 200;
-    margin: -32px -20px 0px 0px;
+    margin: -42px 0px 0px 0px;
 }
+
+
+.bodyMain {
+      /* position: relative; */
+      padding: 20px;
+      /* margin: 0px 10px 10px 30px; */
+      background-color: #F6F6EF;
+      font-family: 'Anek Gujarati', sans-serif;
+      font-size: 15px;
+      /* min-height: calc(100vh - 120px); */
+      /* box-sizing: border-box; */
+      
+      width: 1650px;
+      margin: 0px 0px 0px 120px
+      
+}
+
+
+
+ul{
+    font-family: 'Anek Gujarati', sans-serif;
+    list-style-type: none;
+    color: #8290AE;
+}
+
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+  } 
+
 
 .Footer_list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
-  padding: 4px 8px 24px;
-  color: inherit;
+  padding: 10px 10px 10px;
+  margin-top:15px;
+  color: black;
   font-family: inherit;
 }
 .Footer_list li {
@@ -98,8 +160,9 @@
   color: #000;
   font-size: 12px;
   padding: 4px;
+  
 }
 .Footer_list a {
-  background-color: transparent;
   text-decoration: none;
+  color: black;
 }

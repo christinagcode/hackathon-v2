@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-
 import ResultsByDate from "./BlogResultsByDate";
 import ResultsByPopularity from "./BlogResultsByPopularity";
+import '../App.css';
 
 class BlogResult extends Component {
   constructor(props) {

@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import BlogResults from './components/BlogResults';
 import Footer from './components/Footer';
+import Body from './components/Body'
 import './App.css';
 import { useState, useEffect } from "react";
 
@@ -29,7 +30,7 @@ function App() {
     <div className="App">
     
       <Navbar input={input} setInput={setInput} />
-      <BlogResults />
+      <Body />
       <Footer />
    
     </div>
