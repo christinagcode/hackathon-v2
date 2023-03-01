@@ -162,7 +162,7 @@ a:link {
   justify-content: center;
   list-style-type: none;
   padding: 10px 10px 10px;
-  margin-top:25px;
+  margin:25px 0px 0px -30px;
   color: black;
   font-family: inherit;
 }
