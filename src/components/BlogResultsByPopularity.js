@@ -1,4 +1,5 @@
 import React from "react";
+import '../App.css'
 
 // Dipslay the results
 
@@ -11,11 +12,13 @@ export default function ResultsByPopularity(props) {
   const itemLink = "https://news.ycombinator.com/item?id=";
   const userLink = "https://news.ycombinator.com/user?id=";
   let Result = props.Result;
+
+
   return (
     <li>
       <div>
-        <span>
-          <a href={itemLink + Result.objectID}>{Result.title}</a>
+        <span  className="test" >
+          <a className="titleBlog" href={itemLink + Result.objectID}>{Result.title}</a>
         </span>
         <span>
           <a href={Result.url}>({Result.url})</a>

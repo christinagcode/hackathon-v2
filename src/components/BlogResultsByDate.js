@@ -15,7 +15,7 @@ export default function ResultsByDate(props) {
     <li>
       <div>
         <span>
-          <a href={itemLink + Result.objectID}>{Result.title}</a>
+          <a className="titleBlog" href={itemLink + Result.objectID}>{Result.title}</a>
         </span>
         <span>
           <a href={Result.url}>({Result.url})</a>

@@ -30,6 +30,8 @@ class BlogResult extends Component {
       );
     });
 
+    
+
     // FOR THE DATE API RESULTS
     axios
       .get("http://hn.algolia.com/api/v1/search_by_date?tags=story")

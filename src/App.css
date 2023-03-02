@@ -137,16 +137,27 @@ ul{
 }
 
 
+
+/* .test{
+    border: 2px solid red;
+} */
+
 a:link {
     color: #696969;
     background-color: transparent;
     text-decoration: none;
-  }
+}
   a:visited {
     color: black;
     background-color: transparent;
     text-decoration: none;
   }
+  
+  .titleBlog{
+    color: black !important;
+    /* border: 1px black solid; */
+  }
+  
   a:hover {
     color: black;
     background-color: transparent;
