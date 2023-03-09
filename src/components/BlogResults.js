@@ -18,7 +18,6 @@ class BlogResult extends Component {
   handleChange = (event) => {
     this.setState({ selectedOption: event.target.value });
   };
-
   componentDidMount() {
     // FOR THE POPULARITY API RESULTS
     axios.get("https://hn.algolia.com/api/v1/search?tags=story").then((res) => {
@@ -27,22 +26,50 @@ class BlogResult extends Component {
       console.log(
         "The results are in for popularity:",
         blogPostsResultsPopular
-      );
+        );
     });
-
     
-
+  
+    
     // FOR THE DATE API RESULTS
     axios
-      .get("http://hn.algolia.com/api/v1/search_by_date?tags=story")
-      .then((res) => {
+    .get("http://hn.algolia.com/api/v1/search_by_date?tags=story")
+    .then((res) => {
         const blogPostResultsDate = res.data.hits;
         this.setState({ blogPostResultsDate });
         console.log("The results are in for date:", blogPostResultsDate);
       });
+    }
+    
+    componentDidUpdate(prevProps){
+    console.log(this.props.input, 'componentdidupdate');
+    if(prevProps.input !== this.props.input){
+
+      // FOR THE POPULARITY API RESULTS
+      if(this.state.selectedOption === 'popularity'){
+        return axios.get(`https://hn.algolia.com/api/v1/search?query=${this.props.input}&tags=story`).then((res) => {
+            const blogPostsResultsPopular = res.data.hits;
+            this.setState({ blogPostsResultsPopular });
+            console.log(
+              "The results are in for popularity:",
+              blogPostsResultsPopular
+              );
+          });  
+      }
+        
+
+        // FOR THE DATE API RESULTS
+      axios
+        .get(`http://hn.algolia.com/api/v1/search_by_date?query=${this.props.input}&tags=story`)
+        .then((res) => {
+          const blogPostResultsDate = res.data.hits;
+          this.setState({ blogPostResultsDate });
+          console.log("The results are in for date:", blogPostResultsDate);
+        });
+    }
   }
 
-  render() {
+        render() {
     return (
       <div>
         <div
@@ -77,14 +104,14 @@ class BlogResult extends Component {
         {this.state.selectedOption === "date" && (
           <ul>
             {this.state.blogPostResultsDate.map((article, index) => {
-              return <ResultsByPopularity Result={article} />;
+              return <ResultsByPopularity input={this.props.input} Result={article} />;
             })}
           </ul>
         )}
         {this.state.selectedOption === "popularity" && (
           <ul>
             {this.state.blogPostsResultsPopular.map((article, index) => {
-              return <ResultsByDate Result={article} />;
+              return <ResultsByDate input={this.props.input} Result={article} />;
             })}
           </ul>
         )}

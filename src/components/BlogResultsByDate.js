@@ -15,7 +15,13 @@ export default function ResultsByDate(props) {
     <li>
       <div>
         <span>
-          <a className="titleBlog" href={itemLink + Result.objectID}>{Result.title}</a>
+          <a className="titleBlog" href={itemLink + Result.objectID}>{Result.title.split(' ').map((word)=>{
+            if(props.input && word.toLowerCase().match(props.input.toLowerCase())){
+              return <span style={{backgroundColor:'yellow', fontWeight:'bold'}}>{word} </span>
+            }
+            return word+' '
+          })}
+          </a>
         </span>
         <span>
           <a href={Result.url}>({Result.url})</a>

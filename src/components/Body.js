@@ -2,10 +2,10 @@ import React from 'react'
 import BlogResult from './BlogResults';
 import '../App.css';
 
-function Body() {
+function Body(props) {
   return (
     <div className="bodyMain">
-        <BlogResult />
+        <BlogResult input={props.input} />
     </div>
   )
 }
